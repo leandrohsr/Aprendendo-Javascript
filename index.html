@@ -36,10 +36,44 @@
             <li>object -> Array (vetores)</li>
             <li>function.</li>
         </ul>
+    <h2>Alterando o tipo das variáveis.</h2>
+        <h3><ins>De String para Número.</ins></h3>
+        <p>Muitas vezes quando você está recolhendo os dados, o Javascript te manda de um tipo diferente do desejado, por exemplo, você pede para digitar um número mas este dado vem como tipo string. Neste caso é necessário alterar para tipo number. Segue abaixo, os comandos para isso.</p>
+        <pre><code>Number.parseInt()</code></pre> 
+        <span>Para quando for transformar para número inteiro.</span>
+        <pre><code>Number.parseFloat()</code></pre>
+        <span>Para quando for transformar para um número real.</span>
+        <pre><code>Number()</code></pre>
+        <span>Neste caso, o proprio javascript vai verificar se é int ou float.</span>
+        <h3>De Número para String.</h3>
+        <pre><code>n.toString</code></pre>
+        <span>n é a variável que desejo alterar.</span>
+        <pre><code>String(n)</code></pre>
+    <h2>Alguns comandos de Javascript.</h2>
+        <ol>
+            <li>document.write() = é para escrever o resultado na página criada (print).</li>
+            <li>n.length = quantos caracteres tem a String;</li>
+            <li>n.toUpperCase = tudo para maiúsculas;</li>
+            <li>n.toLowerCase = tudo para minúsculas;</li>
+            <li>n.toFixed() = coloca quantas casas decimais você quer.</li>
+            <li>n.replace('.', ',') = troca o ponto pela virgula (no caso do exemplo)</li>
+            <li>n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) = coloca o número em REAL (R$)</li><!--Para a localização da variável n, em português do Brasil, colocar em estilo moeda, moeda brasileira.-->
+        </ol>
     <script>//Aqui começa a programação em JS
-        window.alert('Minha primeira mensagem!');
-        window.confirm('Está gostando de Javascript?'); //Tem o botão OK e CANCELAR.
-        window.prompt('Qual é o seu nome?');
+        var n1 = Number.parseFloat(window.prompt('Digite o ano em que você nasceu:')) //O ";" não é obrigatório em Javascript.
+        var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
+        var idade = n2 - n1
+        window.alert('Você tem ' + idade + ' anos de idade.') // o sinal de "+" é a concatenação.
+        var nome = window.prompt('Muito bem, agora digite seu nome:')
+        //Para concatenar tudo dentro de uma frase, posso fazer de duas maneiras:
+        document.writeln('O aluno ' + nome + ' tem ' + idade + ' anos de idade!<br/>'); //Ou:
+        document.writeln(`O aluno ${nome}, tem ${idade} anos de idade.<br>`); /*Detalhe que desta forma fica entre crase. Para verificar, jogar dentro nodeJS*/
+        document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome escrito em maiúsculo é ${nome.toUpperCase()}.<br>`)
+        document.write(`Seu nome escrito em minúculo é ${nome.toLowerCase()}.<br>`)
+        document.write(idade.toFixed(2),'<br>') //Coloca 2 casas decimais em números.
+        document.write(idade.toFixed(3).replace('.',','),'<br>')
+        document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
     </script>
 </body>
 </html>
