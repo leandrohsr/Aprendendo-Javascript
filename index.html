@@ -59,6 +59,52 @@
             <li>n.replace('.', ',') = troca o ponto pela virgula (no caso do exemplo)</li>
             <li>n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) = coloca o número em REAL (R$)</li><!--Para a localização da variável n, em português do Brasil, colocar em estilo moeda, moeda brasileira.-->
         </ol>
+        <h2>Operadores aritméticos.</h2>
+        <ul>
+            <li>+ -> sinal de soma</li>
+            <li>- -> sinal de subtração.</li>
+            <li>* -> sinal de multiplicação.</li>
+            <li>/ -> sinal de divisão.</li>
+            <li>% -> sinal de resto da divisão.</li>
+            <li>** -> sinal de potenciação.</li>
+        </ul>
+        <p>Os opreadores tem um <strong><ins>ordem de precedência</ins></strong>, quando for fazer um cálculo matemático. Segue abaixo a seguinte ordem:</p>
+        <ol>
+            <li>1º () = Os parênteses.</li>
+            <li>2º ** = A potenciação.</li>
+            <li>3º * / % = Multiplicação, divisão e resto da divisão.</li>
+            <li>4º + -  = Mais e menos.</li>
+        </ol>
+        <p>Caso apareça operadores da mesma ordem na mesma conta, primeiro é resolvido da esquerda para a direita.</p>
+        <p>Além da forma simples de cálculo, pode ser adicionado o valor a uma variável de forma diferente por exemplo:</p>
+        <p>var n = 5</p>
+        <p>var n = n + 1</p>
+        <p>n = 6</p>
+        <p>ou</p>
+        <p>var n += 1 (que significa a mesma coisa da linha acima)</p>
+        <p>Ou ainda:</p>
+        <p>n++</p>
+        <p>++n</p>
+        <p>Onde ambas irão incrementar mais 1.</p>~
+        <h2>Operadores relacional</h2>
+        <ul>
+            <li>> ou"<" -> Maior ou menor</li>
+            <li><= ou >= -> Maior ou igual ou menor ou igual</li>
+            <li>== -> Igual</li>
+            <li>!= -> Diferente</li>
+            <li>=== -> verifica a igualdade restrita (além do valor, ele verifica o tipo do dado)</li>
+        </ul>
+        <h2>Operadores Lógicos.</h2>
+        <ul>
+            <li>! -> negação</li>
+            <li>&& -> conjunção (e)</li>
+            <li>|| (pipe) -> disjunção (ou)</li>
+        </ul>
+        <h2>Operador ternário</h2>
+        <p>Os operadores ternários (? e :) faz um teste, onde tenho duas opções de respostas. Por exemplo:</p>
+        <p> TESTE ? TRUE : FALSE</p>
+        <p> média >= 7.0 ? "Aprovado" : "Reprovado"</p>
+        <p>O teste acima está perguntando se a média é maior ou igual a 7.0. Se este teste for verdadeiro, vai aparecer a primeira opção (Aprovado), senão, vai aparecer a segunda opção (Reprovado).</p>
     <script>//Aqui começa a programação em JS
         var n1 = Number.parseFloat(window.prompt('Digite o ano em que você nasceu:')) //O ";" não é obrigatório em Javascript.
         var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
