@@ -12,8 +12,9 @@
         }
     </style>
 </head>
-<body>
+<body id="corpo">
     <h1>Olá, mundo!</h1>
+    <button type="button" onclick= 'minhaFuncao()'>Não clique aqui.</button>
     <p>Aqui estou aprendendo Javascript.</p>
     <p>No final do html, antes de fechar o &lt;body&gt;, é feito a programação em javascript com a tag &lt;script&gt;</p>
     <p>A criação das variáveis de um Javascript possui algumas regras:</p>
@@ -39,16 +40,16 @@
     <h2>Alterando o tipo das variáveis.</h2>
         <h3><ins>De String para Número.</ins></h3>
         <p>Muitas vezes quando você está recolhendo os dados, o Javascript te manda de um tipo diferente do desejado, por exemplo, você pede para digitar um número mas este dado vem como tipo string. Neste caso é necessário alterar para tipo number. Segue abaixo, os comandos para isso.</p>
-        <pre><code>Number.parseInt()</code></pre> 
+        <code>Number.parseInt()</code>
         <span>Para quando for transformar para número inteiro.</span>
-        <pre><code>Number.parseFloat()</code></pre>
+        <code>Number.parseFloat()</code>
         <span>Para quando for transformar para um número real.</span>
-        <pre><code>Number()</code></pre>
+        <code>Number()</code>
         <span>Neste caso, o proprio javascript vai verificar se é int ou float.</span>
         <h3>De Número para String.</h3>
-        <pre><code>n.toString</code></pre>
+        <code>n.toString</code>
         <span>n é a variável que desejo alterar.</span>
-        <pre><code>String(n)</code></pre>
+        <code>String(n)</code>
     <h2>Alguns comandos de Javascript.</h2>
         <ol>
             <li>document.write() = é para escrever o resultado na página criada (print).</li>
@@ -105,6 +106,8 @@
         <p> TESTE ? TRUE : FALSE</p>
         <p> média >= 7.0 ? "Aprovado" : "Reprovado"</p>
         <p>O teste acima está perguntando se a média é maior ou igual a 7.0. Se este teste for verdadeiro, vai aparecer a primeira opção (Aprovado), senão, vai aparecer a segunda opção (Reprovado).</p>
+        <h2>Usando o DOM</h2>
+        <p>O DOM (Document Object Model), é um modelo construído como uma árvore, onde tem sua hierarquia. Ele começa em sua raíz e vai ramificando dentro dos elementos. Com isso, o Javascript consegue acessar os elementos no HTML e deixar o ambiente mais dinâmico. </p>
     <script>//Aqui começa a programação em JS
         var n1 = Number.parseFloat(window.prompt('Digite o ano em que você nasceu:')) //O ";" não é obrigatório em Javascript.
         var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
@@ -119,7 +122,12 @@
         document.write(`Seu nome escrito em minúculo é ${nome.toLowerCase()}.<br>`)
         document.write(idade.toFixed(2),'<br>') //Coloca 2 casas decimais em números.
         document.write(idade.toFixed(3).replace('.',','),'<br>')
-        document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+        document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}), '<br>')
+        var corpo1 = document.getElementById("corpo");//O Id está marcado no <body> em HTML
+        corpo1.style.textAlign = "justify";//Para verificar altere para center.
+        function minhaFuncao() {
+            window.alert("Curioso FDP, falei para não apertar!");
+        }
     </script>
 </body>
 </html>
