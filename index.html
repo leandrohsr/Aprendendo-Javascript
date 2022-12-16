@@ -10,7 +10,7 @@
             background-color: black;
             color: white;
         }
-        div{
+        div#inter{
             background-color: green;
             color: white;
             text-align: center;
@@ -60,7 +60,8 @@
         <code>String(n)</code>
     <h2>Alguns comandos de Javascript.</h2>
         <ol>
-            <li>document.write() = é para escrever o resultado na página criada (print).</li>
+            <li>document.write() = é para escrever o resultado na página criada.</li>
+            <li>console.log() = Também escreve na tela do terminal (print)</li>
             <li>n.length = quantos caracteres tem a String;</li>
             <li>n.toUpperCase = tudo para maiúsculas;</li>
             <li>n.toLowerCase = tudo para minúsculas;</li>
@@ -120,6 +121,18 @@
         <div id="inter">
             Passe o mouse!
         </div>
+        <div>
+            <h1>Testando sua velocidade.</h1>
+            <p>O limite máximo permitido é 80Km/h.</p>
+            <form>
+                <label for="vel">Velocidade:</label>
+                <input type="number" name="vel" id="vel">Km/h 
+            </form>
+            <button type="button" onclick = 'velocidade()'>Verificar</button>
+            <div>
+                <p id="resultado">Aqui sairá o resultado.</p>
+            </div>
+        </div>
     <script>//Aqui começa a programação em JS
         var n1 = Number.parseFloat(window.prompt('Digite o ano em que você nasceu:')) //O ";" não é obrigatório em Javascript.
         var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
@@ -155,6 +168,16 @@
         function saiu(){
             inter.innerText = 'Saiu!'
             inter.style.background = 'green'
+        }
+        //Exemplo 3: Condições.
+        function velocidade(){
+            var km = document.getElementById('vel')//Peguei o id 'vel' do html e passei para a var km.
+            var velo = Number(km.value)//Peguei o valor do km, passei para Number e virou a var velo.
+            var res = document.getElementById('resultado')//Ligou o id 'resultado' com a var res.
+            if (velo > 80) {
+            res.innerHTML = `Sua velocidade é de ${velo}KM/h. Você será multado!`
+            }else
+            res.innerHTML = `Você passou a ${velo}Km/h. Continue respeitando as leis de trânsito!`
         }
     </script>
 </body>
