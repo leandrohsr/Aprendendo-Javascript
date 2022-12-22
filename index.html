@@ -68,7 +68,7 @@
             <li>n.toFixed() = coloca quantas casas decimais você quer.</li>
             <li>n.replace('.', ',') = troca o ponto pela virgula (no caso do exemplo)</li>
             <li>n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) = coloca o número em REAL (R$)</li><!--Para a localização da variável n, em português do Brasil, colocar em estilo moeda, moeda brasileira.-->
-            <li>n.addEventListener('evento', nome da função)</li>
+            <li>n.addEventListener('evento', nome da função) = adiciona algum evento para acontecer.</li>
         </ol>
         <h2>Operadores aritméticos.</h2>
         <ul>
@@ -153,6 +153,7 @@
         function minhaFuncao() {
             window.alert("Curioso FDP, falei para não clicar!");
         }
+        
         //Exemplo 2: Interação.
         var inter = document.getElementById('inter')//Aqui o Javascript pega o elemento do HTML
         inter.addEventListener('click', clicou)//Aqui está adicionando um evento.
@@ -169,6 +170,7 @@
             inter.innerText = 'Saiu!'
             inter.style.background = 'green'
         }
+        
         //Exemplo 3: Condições.
         function velocidade(){
             var km = document.getElementById('vel')//Peguei o id 'vel' do html e passei para a var km.
@@ -179,6 +181,65 @@
             }else
             res.innerHTML = `Você passou a ${velo}Km/h. Continue respeitando as leis de trânsito!`
         }
+        
+        //Exemplo 4: Condição Aninhada.
+        var idade = 67
+        document.write(`Você tem ${idade} anos.<br>`)
+        if (idade < 16) {
+            document.write('Não vota <br>')
+        }else if (idade < 18 || idade > 65) {
+            document.write('Voto opcional <br>')
+        }else {
+            document.write('Voto Obrigatório <br>')
+        }
+        //Para pegar hora/data/dia, etc.
+        var agora = new Date()
+        var hora = agora.getHours()
+        if(hora < 12){
+            document.write('Bom dia!')
+        }else if(hora >= 12 && hora <= 18){
+            document.write('Boa tarde!')
+        }else{
+            document.write('Boa noite!')
+        }
+        
+        //Exemplo 5: Condição Múltipla.
+        var hoje = new Date()
+        var DiaSem = hoje.getDay() //Os dias da semana aparecem em números de 0 a 6.
+        /*  
+        Domingo = 0 
+        Segunda = 1
+        Terça = 2
+        Quarta = 3
+        Quinta = 4
+        Sexta = 5
+        Sábado = 6
+        */
+       switch(DiaSem) {
+            case 0:
+                document.write('Hoje é Domingo')
+                break //Extremamente importante este break. Senão a condição não para!!!!!*****
+            case 1:
+                document.write('Hoje é Segunda-feira')
+                break
+            case 2:
+                document.write('Hoje é Terça-feira')
+                break
+            case 3:
+                document.write('Hoje é Quarta-feira')
+                break
+            case 4: 
+                document.write('Hoje é Quinta-feira')
+                break
+            case 5: 
+                document.write('Hoje é Sexta-feira')
+                break
+            case 6: 
+                document.write('Hoje é Sábado')
+                break
+            default: //Este é se nenhum case responder às expectativas da expressão.
+                document.write('Erro inesperado. Dia inválido.')
+       }
     </script>
 </body>
 </html>
