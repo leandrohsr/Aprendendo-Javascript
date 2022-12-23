@@ -1,14 +1,16 @@
-function horas(){
-    var moment = document.getElementById("hora")
-    var horas = new Date()
-    var hour = horas.getHours()
-    if(hour < 12){
-        moment.innerHTML = `Bom dia! Agora são ${hour} horas.`
-    }else if(hour >= 12 && hour < 18){
-        moment.innerHTML = `Boa tarde! Agora são ${hour} horas.`
-    }else if(hour >= 18 && hour <= 0){
-        moment.innerHTML = `Boa noite! Agora são ${hour} horas.`
+function horaDia() {
+    var msg = document.getElementById('msg')
+    var foto = document.getElementById('imagem')
+    var sem = new Date()
+    var hora = sem.getHours()
+    msg.innerHTML = `Agora são ${hora} horas.`
+    if (hora < 12){
+        foto.src = 'manha.png'
+    }else if(hora >= 12 && hora <= 18){
+        foto.src = 'tarde.png'
+        document.body.style.background = '#C8B992'
     }else{
-        moment.innerHTML = 'Hora inválida.'
+        foto.src = 'noite.png'
+        document.body.style.background = '#000D37'
     }
 }
