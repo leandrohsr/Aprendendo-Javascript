@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando idade.</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade.</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="ano">Digite o ano que nasceu:</label>
+                <input type="number" name="ano" id="ano" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sexo" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sexo" id="fem"><!--O name deve ser igual para marcar apenas um-->
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <button onclick="verificar()">Verificar</button>
+            </p>
+        </div>
+        <div id="res">
+            <p>Aqui sairá o resultado.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Curso Javascript</p>
+    </footer>
+    <script src="pratica2.js"></script>
+</body>
+</html>
