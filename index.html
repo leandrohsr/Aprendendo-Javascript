@@ -135,8 +135,10 @@
         </div>
     <script>//Aqui começa a programação em JS
         var n1 = Number.parseFloat(window.prompt('Digite o ano em que você nasceu:')) //O ";" não é obrigatório em Javascript.
-        var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
-        var idade = n2 - n1
+        var n2 = new Date()
+        var n3 = n2.getFullYear
+        //var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
+        var idade = Number(n3.value) - Number(n1.value)
         window.alert('Você tem ' + idade + ' anos de idade.') // o sinal de "+" é a concatenação.
         var nome = window.prompt('Muito bem, agora digite seu nome:')
         //Para concatenar tudo dentro de uma frase, posso fazer de duas maneiras:
@@ -240,6 +242,22 @@
             default: //Este é se nenhum case responder às expectativas da expressão.
                 document.write('Erro inesperado. Dia inválido.')
        }
+       //Exemplo 6: Teste de repetição.
+
+        //Estrutura de repetição com teste lógico no início. while = enquanto
+       var teste1 = document.createAttribute('p')
+        var c = 1
+       while(c <= 3){
+        document.write("Teste de repetição número " + c)
+        c++
+       }
+
+       //Estrutura de repetição com teste lógico no final.
+       var cont = 1
+       do{
+        document.write("Teste de repetição número " + c)
+        c++
+       }while(cont <= 3)
     </script>
 </body>
 </html>
