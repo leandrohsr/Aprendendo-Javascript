@@ -136,9 +136,8 @@
     <script>//Aqui começa a programação em JS
         var n1 = Number.parseFloat(window.prompt('Digite o ano em que você nasceu:')) //O ";" não é obrigatório em Javascript.
         var n2 = new Date()
-        var n3 = n2.getFullYear
-        //var n2 = Number.parseFloat(window.prompt('Digite o ano que você está:'))
-        var idade = Number(n3.value) - Number(n1.value)
+        var n3 = n2.getFullYear()
+        var idade = n3 - n1
         window.alert('Você tem ' + idade + ' anos de idade.') // o sinal de "+" é a concatenação.
         var nome = window.prompt('Muito bem, agora digite seu nome:')
         //Para concatenar tudo dentro de uma frase, posso fazer de duas maneiras:
@@ -153,7 +152,7 @@
         var corpo1 = document.getElementById("corpo");//O Id está marcado no <body> em HTML
         corpo1.style.textAlign = "justify";//Para verificar altere para center.
         function minhaFuncao() {
-            window.alert("Curioso FDP, falei para não clicar!");
+            window.alert("Curioso, falei para não clicar!");
         }
         
         //Exemplo 2: Interação.
@@ -185,11 +184,11 @@
         }
         
         //Exemplo 4: Condição Aninhada.
-        var idade = 67
-        document.write(`Você tem ${idade} anos.<br>`)
-        if (idade < 16) {
+        var idade1 = 67
+        document.write(`Você tem ${idade1} anos.<br>`)
+        if (idade1 < 16) {
             document.write('Não vota <br>')
-        }else if (idade < 18 || idade > 65) {
+        }else if (idade1 < 18 || idade1 > 65) {
             document.write('Voto opcional <br>')
         }else {
             document.write('Voto Obrigatório <br>')
@@ -198,11 +197,11 @@
         var agora = new Date()
         var hora = agora.getHours()
         if(hora < 12){
-            document.write('Bom dia!')
+            document.write('Bom dia! ')
         }else if(hora >= 12 && hora <= 18){
-            document.write('Boa tarde!')
+            document.write('Boa tarde! ')
         }else{
-            document.write('Boa noite!')
+            document.write('Boa noite! ')
         }
         
         //Exemplo 5: Condição Múltipla.
@@ -219,25 +218,25 @@
         */
        switch(DiaSem) {
             case 0:
-                document.write('Hoje é Domingo')
+                document.write('Hoje é Domingo <br>')
                 break //Extremamente importante este break. Senão a condição não para!!!!!*****
             case 1:
-                document.write('Hoje é Segunda-feira')
+                document.write('Hoje é Segunda-feira <br>')
                 break
             case 2:
-                document.write('Hoje é Terça-feira')
+                document.write('Hoje é Terça-feira <br>')
                 break
             case 3:
-                document.write('Hoje é Quarta-feira')
+                document.write('Hoje é Quarta-feira <br>')
                 break
             case 4: 
-                document.write('Hoje é Quinta-feira')
+                document.write('Hoje é Quinta-feira <br>')
                 break
             case 5: 
-                document.write('Hoje é Sexta-feira')
+                document.write('Hoje é Sexta-feira <br>')
                 break
             case 6: 
-                document.write('Hoje é Sábado')
+                document.write('Hoje é Sábado <br>')
                 break
             default: //Este é se nenhum case responder às expectativas da expressão.
                 document.write('Erro inesperado. Dia inválido.')
@@ -245,19 +244,18 @@
        //Exemplo 6: Teste de repetição.
 
         //Estrutura de repetição com teste lógico no início. while = enquanto
-       var teste1 = document.createAttribute('p')
         var c = 1
-       while(c <= 3){
-        document.write("Teste de repetição número " + c)
-        c++
-       }
+        while(c <= 3){
+            document.write("Teste de repetição número " + c + '<br>')
+            c++
+        }
 
        //Estrutura de repetição com teste lógico no final.
-       var cont = 1
-       do{
-        document.write("Teste de repetição número " + c)
-        c++
-       }while(cont <= 3)
+        var cont = 1
+        do{
+            document.write("Teste de repetição número " + cont + '<br>')
+            cont++
+        }while(cont <= 3)
     </script>
 </body>
 </html>
