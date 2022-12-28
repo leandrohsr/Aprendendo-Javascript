@@ -18,6 +18,10 @@
             width: 200px;
             height: 200px;
         }
+
+        div#abc{
+            padding: 10px;
+        }
     </style>
 </head>
 <body id="corpo">
@@ -129,7 +133,7 @@
                 <input type="number" name="vel" id="vel">Km/h 
             </form>
             <button type="button" onclick = 'velocidade()'>Verificar</button>
-            <div>
+            <div id = abc>
                 <p id="resultado">Aqui sairá o resultado.</p>
             </div>
         </div>
@@ -256,6 +260,11 @@
             document.write("Teste de repetição número " + cont + '<br>')
             cont++
         }while(cont <= 3)
+
+        //Estrutura de repetição com incremento.
+        for (var c = 1; c <= 3; c++){
+            document.write("Teste de repetição" + c + "<br>")
+        }
     </script>
 </body>
 </html>
