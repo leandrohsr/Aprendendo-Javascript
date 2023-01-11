@@ -265,6 +265,29 @@
         for (var c = 1; c <= 3; c++){
             document.write("Teste de repetição" + c + "<br>")
         }
+
+        //Arrays ou vetor ou variáveis compostas.
+        
+        document.write("Variáveis compostas são variáveis que podem ser armazenadas vários elementos com seus identificadores dentro de colchetes. Ex: <br>")
+
+        let num = [5,8,2,7,1]
+        document.write(num + '<br>')
+        document.write(num[1] + '<br>') //mostra o elemento na posição 1.
+        num[5] = 9 /*Na variável composta declarada acima há 5 posições onde o número 5 fica na posição 0, o 8 na posição 1, o 2 na posição 2, o 7 na posição 3 e o 1 na posição 4. Então nesta linha eu estou adicionando o número 9 na posição 5.*/
+        num.push(3) /*Neste caso estou adicionando o nº3 na última posição, independente de quantas posições tiver no vetor*/
+        document.write(num + '<br>')
+        document.write(`O vetor tem ${num.length} elementos. <br>`) //Descobre quantos elementos tem no array.
+        num.sort() //Coloca todos os elementos do vetor em ordem crescente.
+        for(let pos = 0; pos < num.length; pos++){
+            document.write(`A posição ${pos} tem o valor ${num[pos]}. <br>`)
+        }
+        //Ou:
+        for(let posicao in num){
+            document.write(num[posicao] + '<br>')
+        }//Significa que: Para cada posição em num eu mostro o num[posicao]. E tem a mesma função.
+
+        //É possível também achar a posição de um valor dentro do vetor.
+        document.write(`O número 5 está na posição ${num.indexOf(5)} <br>`)
     </script>
 </body>
 </html>
